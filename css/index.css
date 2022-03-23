@@ -38,7 +38,7 @@ body{
 .bar-title::before{
     position: absolute;
     content: '';
-    background-image: url('../img/logo.png');
+    background-image: url('./img/logo.png');
     background-size: cover;
     width: 36px;
     height: 30px;
