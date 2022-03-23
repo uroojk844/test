@@ -228,13 +228,14 @@ body{
 
 footer{
     position: fixed;
-    bottom: 8px;
+    bottom: 0px;
     width: 100%;
     display: grid;
     grid-auto-flow: column;
     text-align: center;
     gap: 16px;
-    padding: 0px 16px;
+    padding: 8px 16px;
+    background-color:#fff;
 }
 
 footer .foot-item{
