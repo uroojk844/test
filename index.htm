@@ -7,8 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#fff">
     <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
-    <title>Welcome to Spritual Tours </title>
+    <title>Spritual Window</title>
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/footer.css">
 </head>
 
 <body>
@@ -85,7 +86,7 @@
 
 
         for (let index = 0; index < 5; index++) {
-            $('.card-container').append(`<div class="card">
+            $('.card-container').append(`<a href='place.htm' class="card">
                 <div class="content">
                     <div>
                         <div class="name">Taj Mahal</div>
@@ -95,7 +96,7 @@
                         <i class="fas fa-heart"></i>
                     </div>
                 </div>
-            </div>`);
+            </a>`);
         }
 
         var places = ['Adventure', 'Eco tourism', 'Yoga', 'Spritual', 'Meditation']

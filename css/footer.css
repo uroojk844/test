@@ -1,0 +1,35 @@
+footer{
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    display: grid;
+    grid-auto-flow: column;
+    text-align: center;
+    gap: 16px;
+    padding: 8px 16px;
+    background-color: #fff;
+}
+
+footer .foot-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    height: 32px;
+    white-space: nowrap;
+    color: var(--text);
+}
+
+footer .active{
+    letter-spacing: 1px;
+    padding: 0 8px;
+    color: #fff;
+    border-radius: 8px;
+    background-color: var(--primary);
+}
+
+@media screen and (max-width:600px) {
+    footer .foot-item:not(.active) label{
+        display: none;
+    }
+}

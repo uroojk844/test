@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#fff">
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+    <title>Place</title>
+    <link rel="stylesheet" href="css/place.css">
+</head>
+
+<body>
+
+    <nav class="bar">
+        <a href="index.htm" class="bar-item"><i class="fa fa-arrow-left-long"></i></a>
+        <div class="bar-item"><i class="fas fa-heart"></i></div>
+    </nav>
+
+    <div class="pic" style="background-image: url('img/Taj.jpg')"></div>
+    
+    <div class="details">
+        <h2 class="separate">
+            <span>Taj Mahal, India</span>
+            <span class="price"><i class="fas fa-inr"></i> 5000</span>
+        </h2>
+
+        <div class="separate r2">
+            <span class="star">
+                <i class="fas fa-star"></i> 4.9
+            </span>
+            <span>Estimated cost</span>
+        </div>
+
+        <label >Description</label>
+        <summary>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo, quos quae distinctio a minus quisquam consectetur, aspernatur ratione velit provident hic quod sint corrupti dolores repudiandae nobis maiores porro iure.
+        </summary>
+
+        <div class="separate r3">
+            <div class="item">
+                <i class="icon fas fa-clock"></i> 
+                <div>5 Days</div>
+                <div class="text">Duration</div>
+            </div>
+            <div class="item">
+                <i class="icon fas fa-map-marker-alt"></i> 
+                <div>625 KM</div>
+                <div class="text">Distance</div>
+            </div>
+            <div class="item">
+                <i class="icon fas fa-cloud"></i> 
+                <div>21 C</div>
+                <div class="text">Sunny</div>
+            </div>
+        </div>
+
+        <div class="btn-group">
+            <div class="btn outline"><i class="fas fa-inr"></i> 5000</div>
+            <div class="btn">Book Now</div>
+        </div>
+    </div>
+
+    <script src="https://kit.fontawesome.com/a24ff9630f.js" crossorigin="anonymous"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+       
+        $('.foot-item').click(function (e) { 
+            $('.foot-item').removeClass('active');
+            $(this).addClass('active');
+        });
+        
+    </script>
+</body>
+
+</html>
