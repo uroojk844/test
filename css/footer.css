@@ -4,6 +4,7 @@ footer{
     width: 100%;
     display: grid;
     grid-auto-flow: column;
+    place-items: center;
     text-align: center;
     gap: 16px;
     padding: 8px 16px;
@@ -31,5 +32,15 @@ footer .active{
 @media screen and (max-width:600px) {
     footer .foot-item:not(.active) label{
         display: none;
+    }
+}
+
+@media screen and (min-width:992px){
+    footer{
+        width: max-content;
+        height: 60px;
+        gap: 24px;
+        top: 0;
+        right: 0;
     }
 }

@@ -21,12 +21,7 @@ a{
     color: black;
 }
 
-.main{
-    height: calc(100vh - 48px);
-    overflow-x: auto;
-}
-
-h2{
+.main > h2{
     padding: 16px;
 }
 
@@ -49,36 +44,37 @@ h2{
     font-weight: bold;
 }
 
-.dropdown{
-    width: 120px;
-}
-
-.dropdown-btn{
-    display: flex;
-    justify-content: space-between;
-    padding: 4px 8px;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-}
-
-.dropdown-container{
+.container{
     display: grid;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    grid-template-columns: 500px calc(100% - 500px);
+    height: calc(100vh - 60px);
     overflow: hidden;
-    display: none;
 }
 
-.dropdown-container .dropdown-item{
-    padding: 4px 8px;
-    border-bottom: 1px solid #ccc;
+.place-container{
+    padding: 16px 12px 16px 16px;
+}
+
+.place-container .place{
+    position: relative;
+    height: calc(100vh - 60px);
+    padding: 8px;
+    box-shadow: 5px 5px 5px #e5e5e5,
+    -5px -5px 5px #e5e5e5;
+    border-radius: 24px 24px 0 0;
+}
+
+.pic{
+    border-radius: 16px;
 }
 
 .card-container{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    padding: 16px;
+    display: flex;
+    flex-flow: wrap;
+    align-content: flex-start;
+    padding: 16px 16px 16px 12px;
     gap: 16px;
+    overflow-y: auto;
 }
 
 .card-container::-webkit-scrollbar{
@@ -91,8 +87,8 @@ h2{
     background-color: white;
     position: relative;
     left: 0;
-    box-shadow: 5px 5px 5px rgba(0,0,0,0.18),
-    -5px -5px 5px rgba(0,0,0,0.18);
+    box-shadow: 5px 5px 5px #e5e5e5,
+    -5px -5px 5px #e5e5e5;
 }
 
 .card img{
@@ -127,4 +123,57 @@ h2{
     display: grid;
     place-items: center;
     height: 36px;
+}
+
+@media screen and (max-width:600px) {
+
+    .container{
+        grid-template-columns: auto;
+        height: calc(100vh - 108px);
+    }
+
+    .place-container{
+        position: absolute;
+        bottom: 0;
+        z-index: 1;
+        width: 100%;
+        padding: 0;
+    }
+
+    .place-container .place{
+        box-shadow: none;
+        padding: 0;
+        height: 0;
+        overflow: hidden;
+        border-radius: 0;
+        transition: 0.5s;
+    }
+
+    .place-container .place .pic{
+        border-radius: 0;
+    }
+
+    .card-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (min-width:922px) {
+    .main > h2{
+        box-shadow: 3px 3px 3px #e5e5e5;
+    }
+    
+    .card{
+        width: 190px;
+    }
+
+    .card img{
+        height: 200px;
+    }
+
+    .place-container .pic{
+        background-position: 0 -100px;
+    }
+
 }
