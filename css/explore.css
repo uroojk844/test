@@ -25,28 +25,13 @@ a{
     padding: 16px;
 }
 
-.bar{
-    display: flex;
-    justify-content: space-between;
-    gap: 16px;
-    padding: 0 16px;
-    margin-bottom: 8px;
-    font-size: 18px;
-    letter-spacing: 1px;
-}
-
-.bar-item{
-    cursor: pointer;
-    height: 40px;
-    display: grid;
-    place-items: center;
-    font-size: 26px;
-    font-weight: bold;
+.back{
+    display: none;
 }
 
 .container{
     display: grid;
-    grid-template-columns: 500px calc(100% - 500px);
+    grid-template-columns: auto max-content;
     height: calc(100vh - 60px);
     overflow: hidden;
 }
@@ -69,9 +54,9 @@ a{
 }
 
 .card-container{
-    display: flex;
-    flex-flow: wrap;
-    align-content: flex-start;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 190px);
+    height: calc(100vh - 108px);
     padding: 16px 16px 16px 12px;
     gap: 16px;
     overflow-y: auto;
@@ -85,6 +70,7 @@ a{
     border-radius: 24px;
     padding: 8px;
     background-color: white;
+    height: fit-content;
     position: relative;
     left: 0;
     box-shadow: 5px 5px 5px #e5e5e5,
@@ -132,6 +118,10 @@ a{
         height: calc(100vh - 108px);
     }
 
+    .back{
+        display: block;
+    }
+
     .place-container{
         position: absolute;
         bottom: 0;
@@ -157,13 +147,22 @@ a{
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
+
 }
 
-@media screen and (min-width:922px) {
+@media screen and (min-width:992px) {
     .main > h2{
         box-shadow: 3px 3px 3px #e5e5e5;
     }
     
+    .container{
+        grid-template-columns: 500px auto;
+    }
+
+    .card-container{
+        height: calc(100vh - 60px);
+    }
+
     .card{
         width: 190px;
     }
@@ -172,8 +171,8 @@ a{
         height: 200px;
     }
 
-    .place-container .pic{
-        background-position: 0 -100px;
+    .details{
+        position: absolute;
     }
 
 }

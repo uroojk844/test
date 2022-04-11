@@ -1,0 +1,91 @@
+:root{
+    --primary: rgb(255, 78, 78);
+    --text: #888;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Nunito', sans-serif;
+}
+
+a{
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    font-size: 22px;
+}
+
+h3{
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.form{
+    padding: 16px;
+    width: 600px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.form-grp{
+    position: relative;
+    margin-bottom: 16px;
+}
+
+.form-grp label{
+    color: var(--text);
+    position: absolute;
+    top: 9px;
+    left: 17px;
+    font-size: 16px;
+    letter-spacing: 1px;
+    transition: 0.5s;
+}
+
+.form-grp input{
+    width: 100%;
+    border: 1px solid var(--text);
+    border-radius: 6px;
+    padding: 8px 16px;
+    font-size: 16px;
+    outline: none;
+    letter-spacing: 1px;
+}
+
+.form-grp label.active{
+    font-size: 12px;
+    top: -8px;
+    background-color: #fff;
+    padding: 0 4px;
+}
+
+.button{
+    width: 100%;
+    background-color: var(--primary);
+    color: #fff;
+    letter-spacing: 1px;
+    padding: 8px 0;
+    border-radius: 6px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+@media screen and (max-width:600px) {
+    .form{
+        width: 100%;
+    }
+}

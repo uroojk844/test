@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact us</title>
+    <link rel="stylesheet" href="css/w3.css">
+    <link rel="stylesheet" href="css/contact.css">
+</head>
+<body>
+    <a href="index.htm">
+        <i class="fas fa-times"></i>
+    </a>
+    
+    <div class="form">
+        <h3 class="heading"><i class="fas fa-headset"></i> Contact us</h3>
+
+        <div class="form-grp">
+            <label>Name</label>
+            <input type="text">
+        </div>
+
+        <div class="form-grp">
+            <label>Email</label>
+            <input type="email">
+        </div>
+
+        <div class="button w3-ripple"><i class="fab fa-whatsapp"></i> Chat on whatsapp</div>
+    </div>
+
+    <script src="https://kit.fontawesome.com/a24ff9630f.js" crossorigin="anonymous"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        $("input").focusin(function (e) { 
+            $(this).prev().addClass('active');
+        });
+
+        $("input").focusout(function (e) { 
+            $(this).prev().removeClass('active');
+            if($(this).val().length > 0){
+                $(this).prev().addClass('active');
+            }
+        });
+    </script>
+</body>
+</html>

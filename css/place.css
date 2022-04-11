@@ -29,7 +29,7 @@ a{
 }
 
 .pic{
-    height: calc(100% - 250px);
+    height: calc(100vh - 250px);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -40,7 +40,7 @@ a{
     position: absolute;
     background-color: #fff;
     width: 100%;
-    height: max-content;
+    height: 348px;
     bottom: 0;
     left: 0;
     border-radius: 48px 48px 0 0;
@@ -149,5 +149,14 @@ a{
     }
     to{
         top: 0;
+    }
+}
+
+@media screen and (min-width:768px) {
+    .pic{
+        border-radius: 16px;
+    }
+    .details{
+        height: max-content;
     }
 }

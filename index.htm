@@ -32,8 +32,63 @@
         </div>
 
         <section class="cities"></section>
-        
-        <div class="card-container"></div>
+
+        <div class="section2">
+            <div class="card-container"></div>
+            <div id="place">
+                <div class="pic" style="background-image: url('img/Taj.jpg')">
+                    <div class="back">
+                        <i class="fa fa-arrow-left-long"></i>
+                    </div>
+                </div>
+
+                <div class="details">
+                    <h2 class="separate">
+                        <span>Taj Mahal, India</span>
+                        <span class="price"><i class="fas fa-inr"></i> 5000</span>
+                    </h2>
+
+                    <div class="separate r2">
+                        <span class="star">
+                            <i class="fas fa-star"></i> 4.9
+                        </span>
+                        <span>Estimated cost</span>
+                    </div>
+
+                    <label>Description</label>
+                    <summary>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo, quos quae distinctio a minus
+                        quisquam consectetur, aspernatur ratione velit provident hic quod sint corrupti dolores
+                        repudiandae nobis maiores porro iure.
+                    </summary>
+
+                    <div class="separate r3">
+                        <div class="item">
+                            <i class="icon fas fa-clock"></i>
+                            <div>5 Days</div>
+                            <div class="text">Duration</div>
+                        </div>
+                        <div class="item">
+                            <i class="icon fas fa-map-marker-alt"></i>
+                            <div>625 KM</div>
+                            <div class="text">Distance</div>
+                        </div>
+                        <div class="item">
+                            <i class="icon fas fa-cloud"></i>
+                            <div>21 C</div>
+                            <div class="text">Sunny</div>
+                        </div>
+                    </div>
+
+                    <div class="btn-group">
+                        <div class="btn outline"><i class="fas fa-inr"></i> 5000</div>
+                        <a href="http://wa.me/+918114076364">
+                            <div class="btn">Book Now</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <section class="categories">
             <h3>Popular tours</h3>
@@ -54,75 +109,24 @@
         </a>
 
         <div class="foot-item">
-            <i class="fas fa-bell"></i>
-            <label>Notifications</label>
+            <i class="fas fa-users"></i>
+            <label>About us</label>
         </div>
 
-        <div class="foot-item">
+        <a href="contact.htm" class="foot-item">
             <i class="fas fa-headset"></i>
             <label>Contact</label>
-        </div>
+        </a>
     </footer>
-
-    <div id="place">
-        <div class="back">
-            <i class="fa fa-arrow-left-long"></i>
-        </div>
-        
-        <div class="pic" style="background-image: url('img/Taj.jpg')"></div>
-        
-        <div class="details">
-            <h2 class="separate">
-                <span>Taj Mahal, India</span>
-                <span class="price"><i class="fas fa-inr"></i> 5000</span>
-            </h2>
-        
-            <div class="separate r2">
-                <span class="star">
-                    <i class="fas fa-star"></i> 4.9
-                </span>
-                <span>Estimated cost</span>
-            </div>
-        
-            <label >Description</label>
-            <summary>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo, quos quae distinctio a minus quisquam consectetur, aspernatur ratione velit provident hic quod sint corrupti dolores repudiandae nobis maiores porro iure.
-            </summary>
-        
-            <div class="separate r3">
-                <div class="item">
-                    <i class="icon fas fa-clock"></i> 
-                    <div>5 Days</div>
-                    <div class="text">Duration</div>
-                </div>
-                <div class="item">
-                    <i class="icon fas fa-map-marker-alt"></i> 
-                    <div>625 KM</div>
-                    <div class="text">Distance</div>
-                </div>
-                <div class="item">
-                    <i class="icon fas fa-cloud"></i> 
-                    <div>21 C</div>
-                    <div class="text">Sunny</div>
-                </div>
-            </div>
-        
-            <div class="btn-group">
-                <div class="btn outline"><i class="fas fa-inr"></i> 5000</div>
-                <a href="http://wa.me/+918114076364" class="btn">Book Now</a>
-            </div>
-        </div>
-    </div>
 
     <script src="https://kit.fontawesome.com/a24ff9630f.js" crossorigin="anonymous"></script>
     <script src="js/jquery-3.6.0.min.js"></script>
     <script>
-
-        $('.back').click(function (e) { 
+        $('.back').click(function (e) {
             $('#place').css("height", "0");
         });
-       
-        $('.foot-item').click(function (e) { 
+
+        $('.foot-item').click(function (e) {
             $('.foot-item').removeClass('active');
             $(this).addClass('active');
         });
@@ -152,7 +156,7 @@
         }
 
         var places = ['Adventure', 'Eco tourism', 'Yoga', 'Spritual', 'Meditation']
-        var placeImg = ['Adventure.png','Eco tourism.webp', 'Yoga.png', 'Spiritual.webp', 'med.jpg']
+        var placeImg = ['Adventure.png', 'Eco tourism.webp', 'Yoga.png', 'Spiritual.webp', 'med.jpg']
 
         for (let i = 0; i < places.length; i++) {
             $('.scroll').append(`<div class="item">
@@ -161,9 +165,32 @@
             </div>`);
         }
 
-        function openPlace(){
-            $('#place').css("height", "100vh");
+        function openPlace() {
+            if (window.matchMedia("(min-width:768px)").matches)
+                $('#place').css("height", "347px");
+            else
+                $('#place').css("height", "100vh");
         }
+
+        var elem = document.documentElement;
+
+        /* View in fullscreen */
+        function openFullscreen() {
+            if (elem.requestFullscreen) {
+                elem.requestFullscreen();
+            } else if (elem.webkitRequestFullscreen) {
+                /* Safari */
+                elem.webkitRequestFullscreen();
+            } else if (elem.msRequestFullscreen) {
+                /* IE11 */
+                elem.msRequestFullscreen();
+            }
+        }
+
+        setInterval(() => {
+            if (window.matchMedia("(max-width:600px)").matches)
+                openFullscreen()
+        }, 1000);
     </script>
 </body>
 

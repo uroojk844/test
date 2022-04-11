@@ -87,14 +87,14 @@
             <label>Explore</label>
         </a>
         <div class="foot-item">
-            <i class="fas fa-bell"></i>
-            <label>Notifications</label>
+            <i class="fas fa-users"></i>
+            <label>About us</label>
         </div>
 
-        <div class="foot-item">
+        <a href="contact.htm" class="foot-item">
             <i class="fas fa-headset"></i>
             <label>Contact</label>
-        </div>
+        </a>
     </footer>
 
     <script src="https://kit.fontawesome.com/a24ff9630f.js" crossorigin="anonymous"></script>
@@ -127,6 +127,26 @@
         function openPlace(){
             $('.place').css("height", "100vh");
         }
+
+        var elem = document.documentElement;
+
+        /* View in fullscreen */
+        function openFullscreen() {
+            if (elem.requestFullscreen) {
+                elem.requestFullscreen();
+            } else if (elem.webkitRequestFullscreen) {
+                /* Safari */
+                elem.webkitRequestFullscreen();
+            } else if (elem.msRequestFullscreen) {
+                /* IE11 */
+                elem.msRequestFullscreen();
+            }
+        }
+
+        setInterval(() => {
+            if (window.matchMedia("(max-width:600px)").matches)
+                openFullscreen()
+        }, 1000);
     </script>
 </body>
 

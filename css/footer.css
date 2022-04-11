@@ -1,5 +1,5 @@
 footer{
-    position: fixed;
+    position: absolute;
     bottom: 0px;
     width: 100%;
     display: grid;
@@ -19,6 +19,7 @@ footer .foot-item{
     height: 32px;
     white-space: nowrap;
     color: var(--text);
+    cursor: pointer;
 }
 
 footer .active{
